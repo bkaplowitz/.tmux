@@ -463,6 +463,12 @@ bind -n M-S-Left select-window -p
 bind -n M-S-Right select-window -n
 # fast synchronize panes switching
 bind -n M-s set-window-option synchronize-pane
+# Enable easier window switching
+bind-key -n M-h previous-window
+bind-key -n M-l next-window
+
+# Name windows automatically
+set-option -g automatic-rename on
 # Start windows and panes at 1, not 0
 set -g base-index 1
 setw -g pane-base-index 1
