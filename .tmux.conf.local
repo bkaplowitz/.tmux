@@ -448,9 +448,19 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g status-right 'Continuum status: #{continuum_status}'
+
+# Resurrect settings
+set -g @resurrect-dir '~/.tmux/resurrect'
+set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-processes 'ssh vim nvim python python3 node npm yarn pnpm cargo rustc go ruby rails irb pry'
+
+# Continuum settings for automatic save and restore
 set -g @continuum-restore 'on'
-set -g @continuum-boot 'on'
+set -g @continuum-save-interval '10' # Save every 10 minutes
+set -g @continuum-boot 'on' # Start tmux server on boot
+
+# Display continuum status in status bar
+set -g status-right '#{continuum_status}'
 set -g @continuum-boot-options 'iterm'
 # set -g @
 set -g @plugin 'jimeh/tmux-themepack'
