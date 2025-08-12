@@ -452,7 +452,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 # Resurrect settings
 set -g @resurrect-dir '~/.tmux/resurrect'
 set -g @resurrect-capture-pane-contents 'on'
-set -g @resurrect-processes 'ssh vim nvim python python3 node npm yarn pnpm cargo rustc go ruby rails irb pry'
+set -g @resurrect-processes 'ssh vim nvim python python3 node npm yarn pnpm cargo rustc go ruby rails irb pry uv papermill wandb'
 
 # Continuum settings for automatic save and restore
 set -g @continuum-restore 'on'
