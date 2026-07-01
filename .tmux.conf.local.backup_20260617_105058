@@ -472,7 +472,7 @@ set -g @continuum-boot-options 'iterm'
 set -g mouse on
 bind -n M-s set-window-option synchronize-pane
 set -g default-terminal "screen-256color"
-set -sg escape-time 10
+set -sg escape-time 200
 bind | split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
